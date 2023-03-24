@@ -645,6 +645,7 @@ body {
   width: 100%;
   padding-left: 38px;
   outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus,
@@ -683,6 +684,7 @@ body {
   resize: vertical;
   padding: 8px 16px;
   outline: transparent;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-modal {
@@ -702,15 +704,7 @@ body {
   background: #404bbf;
 }
 
-.form-label-checkbox {
-  display: flex;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-bottom: 24px;
-}
-
-.form-label-checkbox span {
+.custom-checkbox {
   display: flex;
   border: 1px solid #8e8f99;
   border-radius: 2px;
@@ -721,7 +715,75 @@ body {
   justify-content: center;
   fill: transparent;
 }
+.checkbox-icon {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.form-checkbox:checked + .custom-checkbox {
+  background-color: #404bbf;
+}
+.form-checkbox:checked + .custom-checkbox .checkbox-icon {
+  opacity: 1;
+  fill: #fff;
+}
 
-.form-checkbox:checked + .form-label-checkbox span {
-  fill: black;
+.form-label-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.privacy-policy {
+  color: #4d5ae5;
+}
+
+.input-subscribe {
+  border: 1px solid #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  height: 40px;
+  width: 264px;
+  background: #2e2f42;
+  color: #ffffff;
+  outline: transparent;
+  padding-left: 16px;
+  margin-right: 24px;
+}
+
+.subscribe-container {
+  margin-left: 80px;
+}
+
+.btn-subscribe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  background: #4d5ae5;
+  color: #ffffff;
+  border-color: transparent;
+  border-radius: 4px;
+  height: 40px;
+  width: 165px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-subscribe:hover,
+.btn-subscribe:focus {
+  background: #404bbf;
+}
+
+.form-subscribe-container {
+  display: flex;
+}
+
+.sub-icon {
+  margin-left: 16px;
 }
