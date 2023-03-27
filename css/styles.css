@@ -644,7 +644,7 @@ body {
   border-radius: 4px;
   height: 40px;
   width: 100%;
-  padding-left: 38px;
+  padding-left: 43px;
   outline: transparent;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
