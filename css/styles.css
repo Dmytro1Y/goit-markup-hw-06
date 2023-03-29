@@ -631,7 +631,6 @@ body {
 .button-close:focus {
   background-color: var(--button-hover-color);
   fill: white;
-  border: none;
   cursor: pointer;
 }
 
@@ -659,14 +658,16 @@ body {
 }
 
 .form-control {
+  display: block;
   position: relative;
 }
 
 .modal-icon {
   position: absolute;
-  left: 19px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-group-name {
@@ -714,10 +715,15 @@ body {
   border-radius: 4px;
   border-color: transparent;
   color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
   margin: 0 auto;
   min-width: 169px;
   height: 56px;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .btn-modal:hover,
@@ -807,6 +813,10 @@ body {
   min-width: 165px;
   cursor: pointer;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
 }
 
 .btn-subscribe:hover,
